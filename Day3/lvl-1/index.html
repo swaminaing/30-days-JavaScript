@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3 lvl-1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1 
+        let firstName = "Swam";
+        let lastName = 'Naing';
+        let country = 'Myanmar';
+        let city = "Mandalay";
+        let age = 21;
+        let isMarried = false;
+        let year = new Date().getFullYear();
+
+        // console.log(firstName, lastName, country, city, age, isMarried, year);
+        console.log(typeof(firstName), typeof(lastName), typeof(country), typeof(city), typeof(age), typeof(isMarried), typeof(year));
+
+        //No.2
+        //check if type of "10" is equal to 10 
+        console.log("10" == 10 ? true : false); // true (But when you use completely equal(means "===") it will return false)
+
+        //No.3 
+        console.log(parseInt('9.8') == 10 ? true : false); //false (ofcourse it changed into number data type but the values are not equal)
+
+        //No.4
+        // 3 truthy values
+        console.log('Boolean True', "strings that hold values", "numbers except 0");
+        console.log('null', 0, undefined);
+
+        //No.5 
+        console.log(4 > 3, 4 >= 3, 4 < 3, 4 <= 3, 4 == 4, 4 === 4, 4 != 4, 4 !== 4, 4 != '4', 4 == '4', 4 === '4');
+        //(xii)
+        let pylength = "python";
+        let jargon = "jargon";
+        //make falsy comparison 
+        console.log(pylength.length !== jargon.length ? true : false);
+
+        //No.6 
+        console.log(4>3 && 10<12, 4>3 && 10>12, 4>3 || 10<12, 4>3 || 10>12, !(4>3), !(4<3), !(false), !(4>3 && 10<12), !(4>3 && 10>12), !(4==="4"));
+        // (xi) 
+        //check 
+        let checkpy = pylength.includes('on');
+        let checkjar = jargon.includes('on');
+
+        console.log(!(checkpy || checkjar));
+
+        //No.7
+        //(i) 
+        const currentDate = new Date();
+        console.log(currentDate.getFullYear());
+        console.log(currentDate.getMonth());
+        console.log(currentDate.getDate());
+        console.log(currentDate.getDay());
+        console.log(currentDate.getHours());
+        console.log(currentDate.getMinutes());
+        console.log(currentDate.getTime());
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 lvl-1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1 and 2
+        // name, age, color, legs properties and create different methods
+        class Animal{
+            constructor(name, age, color, legs){
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.legs = 4;
+            }
+
+            animalInfo(){
+                let name = this.name;
+                let age = this.age;
+                let color = this.color;
+                let legs  = this.legs;
+
+                return `${name} is ${age} years old and it has ${color} color and it have ${legs} legs`;
+            }
+        }
+
+        const animal1 = new Animal("Ken", 3, "blue", 4);
+        console.log(animal1.animalInfo());
+        console.log(animal1)
+
+        class Dog extends Animal{
+           canBark(){
+                return `${this.name} can bark. Woof...Woof`;
+           }
+        }
+
+        const dog = new Dog("Aung Net", 4, "Brown", 4);
+        console.log(dog.animalInfo());
+        console.log(dog.canBark());
+
+        class Cat extends Animal{
+            canCrawl(){
+                return `${this.name} is cat and can't crawl`;
+            }
+        }
+
+        const cat = new Cat("Shwe Wah", 5, "Yellow", 4);
+        console.log(cat.canCrawl());
+    </script>
+</body>
+</html>

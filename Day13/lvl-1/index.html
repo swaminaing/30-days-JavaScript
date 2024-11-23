@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        
+        //No.1
+       const countries = [
+        ["Finland", "Helsinki"],
+        ["Sweden", "Stockholm"],
+        ["Norway", "Oslo"],
+       ]
+
+       console.table(countries);
+
+       //No.2
+       const countriesData = {
+            name: "Myanmar",
+            capital: "Nay Pyi Taw",
+            population : 20000000,
+       }
+
+       console.table(countriesData);
+
+       //No.3 
+       console.group("Countries");
+       console.log(countries);
+       console.groupEnd("Countries");
+
+       console.group("CountriesData");
+       console.log(countriesData);
+       console.groupEnd(countriesData);
+
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8 lvl-3</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //No.1
+        const personAccount = {
+            firstName: "Swam",
+            lastName: "Naing",
+            incomes: [],
+            expenses: [],
+            addItem: function(amount){
+                this.incomes.push(amount);
+            },
+            addExpense: function(amount){
+                this.expenses.push(amount);
+            },
+            totalIncome: function(){
+                let totalIncome = 0;
+                for(const income of this.incomes){
+                    totalIncome += income;
+                }
+
+                return totalIncome;
+            },
+            totalExpense: function(){
+                let totalExpense = 0;
+                for(const expense of this.expenses){
+                    totalExpense += expense;
+                }
+
+                return totalExpense;
+            },
+            accountBalance: function(){
+                const totalIncome = this.totalIncome();
+                const totalExpense = this.totalExpense();
+
+                const balance = totalIncome - totalExpense;
+                return balance;
+            },
+            accountInfo: function(){
+                return `Name: ${this.firstName} ${this.lastName} \n
+                        Total Income: ${this.totalIncome} \n
+                        Total Expense: ${this.totalExpense} \n
+                        Balance: ${this.accountBalance} \n`;
+            }
+
+        }
+
+        let addItem = personAccount.addItem(300000);
+        let addExpense = personAccount.addExpense(100000);
+        let totalIncome = personAccount.totalIncome();
+        let totalExpense = personAccount.totalExpense();
+        let balance = personAccount.accountBalance();
+        let info = personAccount.accountInfo();
+
+        console.log(addItem, addExpense, totalExpense, totalIncome, balance, info);
+
+        //No.2
+        //No.3
+        //No.4
+
+
+    </script>
+</body>
+</html>

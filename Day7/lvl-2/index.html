@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7 lvl-2</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        //No.1
+        // ax+by+c = 0;
+        function solveLinEquation(a, b, c, x = 0){
+           if(b === 0){
+                console.log("coefficient of y must not be 0");
+           }
+
+           const y = (-a*x - c) / b;
+           return Math.floor(y)
+        }
+
+        const a = 2;
+        const b = 5;
+        const c = 3;
+        const x = 2;
+        const y = solveLinEquation(a, b, c, x);
+        console.log(`{${x}, ${y}}`)
+
+        //No.2
+        //ax^2 + bx + c;
+        function solveQuadEquation(a, b, c){
+            const quadEquation = (a * x **2) + (b * x) + c;
+            console.log(quadEquation)
+        }
+
+        solveQuadEquation(2, 3, 4)
+
+        //No.3
+        function printArray(arrs){
+            for(const arr of arrs){
+                console.log(arr)
+            }
+        }
+
+        printArray([2, 4, 5]);
+
+        //No.4
+        function showDateTime(){
+            const date = new Date();
+            const day = date.getDay();
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            
+
+            let dayFormatted = day < 10 ? "0" + day : day;
+            let monthFormatted = month < 10 ? "0" + month : month;
+
+            let formattedHours = hours < 10 ? "0" + hours : hours;
+            let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+
+            console.log(`${dayFormatted} / ${monthFormatted} / ${year} ${formattedHours}:${formattedMinutes}`);
+        }
+
+        showDateTime();
+
+        //No.5
+        function swapValues(x, y){
+            let arr = [];
+            arr[0] = x;
+            // arr[]
+        }
+
+        swapValues(2, 4)
+
+        //No.6
+        let reverseArr = [];
+        function reverseArray(arr){
+            
+            for(let i = arr.length - 1; i >= 0; i--){
+                reverseArr.push(arr[i])
+            }
+
+            console.log(reverseArr)
+        }
+
+        reverseArray([2, 3, 5]);
+
+        //No.7
+        let capitalizeArr = [];
+        function capitalizeArray(arrs){
+            for(const arr of arrs){
+                capitalizeArr.push(arr.charAt(0).toUpperCase() + arr.slice(0));
+            }
+
+            
+        }
+
+        capitalizeArray(["hondurus", "myanmar"])
+
+        //No.8
+        let itemArr = [];
+        function addItem(items){
+            itemArr.push(items);
+            console.log(itemArr);
+        }
+
+        addItem(1)
+        addItem(2)
+
+        console.log("\n")
+
+        //No.9
+
+        function removeItem(idx, array){
+            console.log([...array.slice(0, idx), ...array.slice(idx + 1, array.length)])
+        }
+
+        removeItem(3, [1, 2, 3, 4, 5])
+
+        console.log("\n")
+
+        //No.10
+        function sumOfNumbers(number){
+            var sum = 0;
+            for(let i = 0; i < number; i++){
+                sum += i
+            }
+
+            console.log(sum)
+        }
+
+        sumOfNumbers(9)
+
+        //No.11
+
+        function sumOfOddNumbers(number){
+          var sum = 0;
+          for(let i = 0; i <= number; i++){
+            if(i % 2 !== 0){
+                sum += i;
+            }
+          }
+
+          console.log(sum)
+        }
+
+        sumOfOddNumbers(9)
+
+        //No.12
+
+        function sumOfEvenNumbers(number){
+          let sum = 0;
+          for(let i = 0; i <= number; i++){
+           if(i % 2 === 0){
+                sum += i;
+           }
+          }
+
+          console.log(sum)
+        }
+
+        sumOfEvenNumbers(9)
+
+        //No.13
+        let oddCount = 0;
+        let evenCount = 0;
+
+        function evensAndOdds(num){
+            for(let i = 0; i <= num; i++){
+                if(i % 2 === 0){
+                    evenCount++;
+                }else{
+                    oddCount++;
+                }
+            }
+
+            console.log("The numbers of odds are:" + oddCount, "The numbers of evens are:"+ evenCount)
+        }
+
+        evensAndOdds(10)
+
+        //No.14
+        function sumOfArguments(){
+            let sum = 0;
+            for(let i = 0; i < arguments.length; i++){
+                sum += arguments[i]
+            }
+            console.log(sum)
+        }
+
+        sumOfArguments(1, 2, 3)
+
+        //No.15
+        function randomUserIp(){
+            const part1 = Math.floor(Math.random() * 256);
+            const part2 = Math.floor(Math.random() * 256);
+            const part3 = Math.floor(Math.random() * 256);
+            const part4 = Math.floor(Math.random() * 256);
+
+            console.log(`Your random Ip is : ${part1}.${part2}.${part3}.${part4}`)
+        }
+
+        randomUserIp()
+
+        //No.16 
+
+        //No.17
+        //let's solving with simple approach 
+        const chars = "ABCDEF01234567890";
+        let hexa = "#";
+        function randomHexaNumberGenerator(){
+            for(let i = 0; i < 6; i++){
+                hexa += chars[Math.floor(Math.random() * 10)];
+            }
+
+            console.log(hexa)
+        }
+
+        randomHexaNumberGenerator();
+
+        //No.18
+        function userIdGenerator(){
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let userId = "";
+            for(let i = 0; i < 7; i++){
+                userId += characters[Math.floor(Math.random() * characters.length)]
+            }
+            return userId;
+        }
+
+       const userId = userIdGenerator();
+       console.log(userId)
+
+    </script>
+</body>
+</html>

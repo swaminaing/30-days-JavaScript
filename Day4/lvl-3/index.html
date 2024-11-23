@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 lvl-3</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        //No.1 //with leap year 
+        const year = +prompt("Enter a year: ", null);
+        const month = prompt("Enter a month: ", null);
+        const changeLower = month.toLowerCase();
+        switch(month !== "null"){
+            case changeLower === "september" || changeLower === "april" || changeLower === "june" || changeLower === "november":
+                console.log(`${changeLower.charAt(0).toUpperCase()+changeLower.slice(1)} has 30 days`);
+                break;
+
+            //extra
+            case changeLower === "february" && year % 4 === 0 :
+                console.log(`${changeLower.charAt(0).toUpperCase()+changeLower.slice(1)} has 29 days`);
+                break;
+            
+            case changeLower === "february" && year % 4 !== 0 :
+                console.log(`${changeLower.charAt(0).toUpperCase()+changeLower.slice(1)} has 28 days`);
+                break;
+
+            default :
+            console.log(`${changeLower.charAt(0).toUpperCase()+changeLower.slice(1)} has 31days.`);
+        }
+    </script>
+    
+</body>
+</html>

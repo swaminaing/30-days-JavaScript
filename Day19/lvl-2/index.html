@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day19 lvl-2</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.2
+        function outerFunction(){
+            function innerFunction1(name){
+                return `Firstname: ${name}`;
+            }
+
+            function innerFunction2(name){
+                return `Lastname: ${name}`;
+            }
+
+            function innerFunction3(age){
+                return `Age: ${age}`;
+            }
+
+            return {
+                "Firstname": innerFunction1("Swam"),
+                "Lastname": innerFunction2("Naing"),
+                "Age": innerFunction3(21)
+            }
+        }
+
+        const innerFuns = outerFunction();
+
+        console.log(innerFuns.Firstname, innerFuns.Lastname, innerFuns.Age);
+        
+    </script>
+</body>
+</html>

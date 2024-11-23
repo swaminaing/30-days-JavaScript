@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day19 lvl1 / lvl-2</title>
+</head>
+<body>
+
+    <p id="first" class="paragraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vitae voluptatem et ipsam velit cumque iure at reprehenderit? Dolores unde ducimus quidem, dolor non culpa nobis vero inventore alias modi?</p>
+    <p id="second" class="paragraphs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus deleniti aliquid commodi, quo alias assumenda exercitationem illum recusandae. Illo, sint! Dicta assumenda repudiandae necessitatibus hic, quibusdam vel rerum voluptatibus quisquam?
+    Eaque aspernatur in esse voluptatem neque ullam doloremque velit illo ut eum, omnis necessitatibus tenetur similique deserunt saepe unde veniam. Itaque temporibus dolorem aperiam error eligendi et eos iure dolores?</p>
+    <p id="third" class="paragraphs">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, obcaecati ipsum? Esse aliquam libero eaque quos similique odit laudantium quas, aliquid mollitia nostrum modi quam suscipit assumenda provident enim voluptates!</p>
+    <p id="fourth" class="paragraphs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, amet ipsa. Esse, dolorem, ducimus sed sint ab, praesentium asperiores quos vel atque quo ipsum et totam dolores laborum nesciunt? Autem.</p>
+
+    <script type="text/javascript">
+        //No.1
+        const getPTags = document.getElementsByTagName("p");
+        console.log(getPTags[0]);
+
+        //No.2
+        const getFirstPById = document.getElementById("first");
+        const getSecondPById = document.getElementById("second");
+        const getThirdPById = document.getElementById("third");
+        const getFourthPById = document.getElementById("fourth");
+
+        console.log(getFirstPById, getSecondPById, getThirdPById, getFourthPById)
+
+        //No.3
+        const getAllParagraphs = document.querySelectorAll(".paragraphs");
+        console.log(getAllParagraphs);
+
+        //No.4
+        getAllParagraphs.forEach((paragraph) => {
+            console.log(paragraph.textContent);
+        })
+
+        //No.5
+        getFourthPById.setAttribute("paragraph", "fourth paragraph");
+        console.log(getFourthPById)
+
+        //No.6
+        getAllParagraphs.forEach((paragraph) => {
+            paragraph.id = " ";
+            paragraph.className = " ";
+
+            console.log(paragraph)
+        })
+        // _______________________________________________________________________________
+
+        //lvl-2
+        // color, background, border, font-size, font-family
+        //No.1
+        getAllParagraphs.forEach((paragraph) => {
+            paragraph.style.color = "red";
+            paragraph.style.backgroundColor = "black";
+            paragraph.style.border = "1px solid red";
+            paragraph.style.fontSize = "14px";
+            paragraph.style.fontFamily = "sans-serif";
+        })
+
+        //No.2
+        // the first and third paragraph a color of green, and the second and the fourth paragraph a red color
+        getFirstPById.style.color = "green";
+        getSecondPById.style.color = "red";
+        getThirdPById.style.color = "red";
+    </script>
+</body>
+</html>

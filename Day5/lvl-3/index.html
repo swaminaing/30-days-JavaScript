@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 lvl-3</title>
+    <script src="../lvl-2/countries.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+        const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+        let sortedAges = ages.sort((a, b) => a - b);
+        console.log(sortedAges)
+        // let result = ages.sort((a, b) => b - a);
+
+        //Using spread operator (nice and easy) 
+        console.log(Math.max(...sortedAges));
+        console.log(Math.min(...sortedAges));
+
+        //without using spread operator, you can use apply method
+        console.log(Math.max.apply(null, ages));
+        console.log(Math.min.apply(null, ages));
+
+        //if you don't want to use above methods, you can still solve with looping
+        let minAge = ages[0];
+        let maxAge = ages[0];
+        ages.forEach(age => {
+            if(age < minAge){
+                minAge = age;
+            }
+
+            if(age > maxAge){
+                maxAge = age;
+            }
+        })
+
+        console.log(minAge, maxAge);
+        console.log(`\n`);
+
+        //Finding median
+        let middleIndex = Math.floor(sortedAges.length / 2);
+        let median;
+        if(sortedAges.length % 2 === 0){
+            median = (sortedAges[middleIndex + 1] + sortedAges[middleIndex]) / 2;
+        }else{
+            median = sortedAges[middleIndex];
+        }
+
+        console.log(median)
+        //Finding average age
+        let sum = 0;
+        ages.forEach(age => {
+            sum += age;
+        }) 
+
+        let averageAge = sum / ages.length;
+        console.log(Math.round(averageAge));
+
+        //Find the range of age
+        let rangeAge = Math.max(...ages) - Math.min(...ages);
+        console.log(rangeAge);
+
+        let diffMax = Math.abs(Math.max(...ages) - rangeAge);
+        let diffMin = Math.abs(Math.min(...ages) - rangeAge);
+        console.log(diffMax, diffMin);
+
+        //slice first 10 countries
+        console.log(countries.sort().slice(0, 10));
+        
+        //No.2
+        let even = Math.floor(countries.length / 2) - 1;
+        let odd = Math.floor(countries.length / 2);
+  
+        if(countries.length % 2 === 1){
+            console.log(countries[odd]);
+        }else{
+            console.log(countries[even]);
+        }
+
+        //No.3
+        if(countries.length % 2 === 1){
+            let left = countries.slice(0, countries.indexOf(countries[odd]));
+            let right = countries.slice(countries.indexOf(countries[odd]));
+
+            // left.push(prompt("Enter new country: "));
+            console.log(left, right);
+            console.log(countries = [...left, ...right])
+        }else{
+           let evenLeft = countries.slice(0, countries.indexOf(countries[even + 1]));
+            let evenRight  = countries.slice(countries.indexOf(countries[even + 1]));
+
+            console.log(left, right);
+            console.log(countries = [...left, ...right]);
+        }
+    </script>
+</body>
+</html>

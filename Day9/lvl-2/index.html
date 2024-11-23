@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9 lvl-2</title>
+    <script src="./countries.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+        const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+        const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        const products = [
+        { product: 'banana', price: 3 },
+        { product: 'mango', price: 6 },
+        { product: 'potato', price: ' ' },
+        { product: 'avocado', price: 8 },
+        { product: 'coffee', price: 10 },
+        { product: 'tea', price: '' },
+        ]
+
+        //No.1
+        const totalPrice = products.filter((product) => typeof product.price === "number").map(product => product.price).reduce((product, cur) => product += cur);
+
+        console.log(totalPrice);
+
+        //No.2
+        const totalprice = products.reduce((acc, item)=>{ 
+          return typeof item.price === 'number' ? acc + item.price : acc;
+        }, 0);
+
+
+        console.log(totalprice);
+        console.log("\n");
+
+        //No.3
+        const countriesWithLand = countriesFromExternal.filter(country => country.includes('land'));
+        const countriesEndIa = countriesFromExternal.filter(country => country.endsWith('ia'));
+        const countriesWithIsLand = countriesFromExternal.filter(country => country.includes('island'));
+
+        console.log(countriesWithLand);
+        console.log(countriesEndIa);
+        console.log(countriesWithIsLand);
+        console.log("\n");
+
+        //No.3
+
+        //No.4
+        // function getFirstTenCountries(countries){
+        //     console.log(countries.slice(0, 10))
+        // }
+
+        //No.5
+        
+        const getFirstTenCountries = () => {
+            return countriesFromExternal.reduce((result, country, index) => {
+                if (index < 10) {
+                result.push(country);
+                }
+                return result;
+            }, [])
+        };
+
+        console.log(getFirstTenCountries());
+
+        //No.6
+        const getLastTenCountries = (countries) => {
+            return countries.slice(-10).map(country => country);
+        }
+
+        console.log(getLastTenCountries(countriesFromExternal));
+
+        //No.7
+        const mostLettersUsed = (countries) => {
+            countries.forEach((country) => {
+                console.log(country.charAt(0));
+            })
+        }
+
+        mostLettersUsed(countriesFromExternal)
+
+</script>
+</body>
+</html>

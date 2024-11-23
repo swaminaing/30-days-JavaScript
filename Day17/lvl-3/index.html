@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day17 lvl-3</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+        // Create an object called personAccount. It has firstname, lastname, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is also a set of expenses and its description.
+
+        //Callback
+const doSomething = callback => {
+  setTimeout(() => {
+    const skills = ['HTML', 'CSS', 'JS']
+    callback('It did not go well', skills)
+  }, 2000)
+}
+
+const callback = (err, result) => {
+  if (err) {
+    return console.log(err)
+  }
+  return console.log(result)
+}
+
+doSomething(callback)
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11 lvl-1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+        const constantsArr = [2.718, 3.142, 9.81, 98.6, 100];
+        const [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = [constantsArr];
+        // console.log(e, pi, gravity, humanBodyTemp, waterBoilingTemp)
+        
+        //with objects
+        const constants = {
+            e: 2.718,
+            pi: 3.142,
+            gravity: 9.81,
+            humanBodyTemp: 98.6,
+            waterBoilingTemp: 100,
+        }
+
+        const destructure = ({e, pi, gravity, humanBodyTemp, waterBoilingTemp}) => {
+            return ` e : ${e} \n pi : ${pi} \n Gravity : ${gravity} \n Human Body Temperature : ${humanBodyTemp} \n Water Boiling Temperature : ${waterBoilingTemp}`;
+        }
+
+        console.log(destructure(constants))
+
+        //No.2
+        const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway'];
+        const [fin, est, swe, den, nor] = countries;
+        console.log(fin, est, swe, den, nor);
+
+        //No.3
+        const rectangle = {
+            width: 20,
+            height: 10,
+            area: 200,
+            perimeter: 60
+        }
+        const destructureRectangle = ({width, height, area, perimeter}) => {
+            return ` Width: ${width} \n Height: ${height} \n Area: ${area} \n Perimeter: ${perimeter} \n`;
+        }
+
+        console.log(destructureRectangle(rectangle));
+
+
+
+      
+ 
+    </script>
+</body>
+</html>

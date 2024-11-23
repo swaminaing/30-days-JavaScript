@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day18 lvl-3</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const countriesAPI = 'https://restcountries.com/v2/all';
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds';
+
+        //No.1
+
+        const fetchData = async () => {
+            try{
+                const response = await fetch(catsAPI);
+                const cats = await response.json();
+                // console.log(cats)
+                for(const cat of cats){
+                    const getMetricWeight = cat.weight.metric.split("-");
+
+                    const minWeight = +getMetricWeight[0];
+
+                    const maxWeight = +getMetricWeight[1];
+
+                    const averageWeight = (maxWeight + minWeight) / 2;
+
+                    // return averageWeight;
+                    
+                }
+            }catch (err){
+                console.log(err)
+            }
+        }
+
+        fetchData();
+
+        //No.2
+        const fetchCountries = async () => {
+            try{
+                const response = await fetch(countriesAPI);
+                const countries = await response.json();
+
+                const areaOfCountries = [];
+                
+                for(const country of countries){
+                    areaOfCountries.push(country.area);
+
+                    // console.log(country.area)
+                }
+
+                areaOfCountries.sort((a, b) => b - a);
+
+                console.log(areaOfCountries.slice(0, 10))
+            }catch (err){
+            console.log(err)
+            }
+        }
+
+        fetchCountries();
+
+        //No.3
+        const fetchCountryLanguages = async () => {
+            try{
+                const response = await fetch(countriesAPI);
+                const countries = await response.json();
+
+                const uniqueLanguages = new Set();
+
+                for(const country of countries){
+                    for(const language of country.languages){
+                        uniqueLanguages.add(language.name)
+                    }
+                }
+
+                console.log(uniqueLanguages)
+            }catch(err){
+                console.log(err)
+            }
+        }
+
+        fetchCountryLanguages();
+
+
+    </script>
+</body>
+</html>

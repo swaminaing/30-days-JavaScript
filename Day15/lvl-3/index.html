@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 lvl-3</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+        class PersonAccount{
+            constructor(firstname, lastname, incomes, expenses){
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.incomes = [];
+                this.expenses = [];
+            }
+
+            set addIncome(income){
+                this.incomes.push(income);
+            }
+
+            get getIncome(){
+                return this.incomes;
+            }
+
+            set addExpense(expense){
+                this.expenses.push(expense);
+            }
+
+            get getExpense(){
+                return this.expenses;
+            }
+
+            totalIncome(){
+                let totalIncome = 0;
+                for(const income of this.incomes){
+                    totalIncome += income;
+                }
+                return totalIncome;
+            }
+
+            totalExpense(){
+                let totalExpense = 0;
+                for(const expense of this.expenses){
+                    totalExpense += expense;
+                }
+
+                return totalExpense;
+            }
+
+            accountBalance(){
+                return this.totalIncome() - this.totalExpense();
+            }
+
+            accountInfo(){
+                return `First Name: ${this.firstname}\nLast Name: ${this.lastname}\nBalance: ${this.accountBalance()}`;
+            }
+        }
+
+        const person1 = new PersonAccount("Aung", "Aung");
+        console.log(person1)
+        console.log(person1.addIncome = 100000);
+        console.log(person1.addExpense = 30000);
+        console.log(person1)
+        console.log(person1.addIncome = 100000);
+        console.log(person1.addExpense = 30000);
+        console.log(person1);
+        console.log(person1.getIncome, person1.getExpense);
+        console.log(person1.totalIncome(), person1.totalExpense());
+        console.log(person1.accountBalance());
+        console.log(person1.accountInfo());
+    </script>
+</body>
+</html>

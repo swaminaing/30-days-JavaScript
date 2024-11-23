@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11 lvl-3</title>
+    <script src="./countries_data.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+      
+        for(const {name, capital, population, languages} of countries_data){
+                // console.log(`Name: ${name} \n Capital: ${capital} \n Population: ${population} \n Languages: ${languages}`) ;
+            }
+
+        //No.2
+        const student = ['David', ['HTML', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
+        const [name, skills, [htmlScores, cssScores, jsScores, reactScores]] = student;
+        
+        const displayInOneLine = `${name} ${skills.length} [${skills.join(", ")}] ${jsScores} ${reactScores}`;
+        console.log(displayInOneLine);
+
+        //No.3
+        const students = [
+        ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
+        ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
+      ]
+
+     
+        function convertArrayToObject(array){
+            const [name, skills, scores] = array;
+
+            const studentObjects = {
+                name: name,
+                skills: skills,
+                scores: scores,
+            }
+
+            return studentObjects
+        }
+
+        const convertStudentObject = students.map(student => convertArrayToObject(student));
+        console.log(convertStudentObject);
+
+        //No.4
+        const studentObject = {
+            name: 'David',
+            age: 25,
+            skills: {
+                frontEnd: [
+                    { skill: 'HTML', level: 10 },
+                    { skill: 'CSS', level: 8 },
+                    { skill: 'JS', level: 8 },
+                    { skill: 'React', level: 9 }
+                ],
+                backEnd: [
+                    { skill: 'Node',level: 7 },
+                    { skill: 'GraphQL', level: 8 },
+                ],
+                dataBase:[
+                    { skill: 'MongoDB', level: 7.5 },
+                ],
+                dataScience:['Python', 'R', 'D3.js']
+            }
+        }
+
+        const copiedStudents = {...studentObject, skills: {...studentObject.skills}};
+    
+
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6 lvl-2</title>
+    <!-- countries array from external  -->
+    <script src="./countries.js" type="text/javascript"></script>
+    <!-- webTechs array from external -->
+    <script src="./web_techs.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+    //No.1
+    let count = 10;
+    const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+
+    for(let idx = 0; idx < count; idx++){
+        const getRandom = Math.floor(Math.random() * characters.length);
+        result += characters[getRandom];
+    }
+
+    console.log(result)
+
+    //No.2
+    const chars = "abcdef01234567890";
+    let hex = "#";
+    for(let i = 0; i < 6; i++){
+        const ranNum = Math.floor(Math.random() * chars.length)
+        hex += chars.charAt(ranNum);
+     
+    }
+
+    console.log(hex);
+
+    //No.3
+    let rgbColors = [];
+    for(let idx = 0; idx < 3; idx++){
+        const ranNum = Math.floor(Math.random() * 256);
+        rgbColors.push(ranNum)
+    }
+
+    console.log(`rgb(${rgbColors[0]}, ${rgbColors[1]}, ${rgbColors[2]})`);
+
+    //No.4
+    for(const country of countries){
+        console.log(country.toUpperCase());
+    }
+
+    //No.5
+    let newArr = [];
+    for(const country of countries){
+        newArr.push(country.length)
+    }
+
+    console.log(newArr)
+
+    //No.6
+    let countriesInfo = [];
+    for(const country of countries){
+        const subCountries = country.substr(0, 3);
+        countriesInfo.push( [country, subCountries, country.length])
+    }
+
+    console.log(countriesInfo)
+
+    //No.7
+    let countriesWithLand = [];
+    for(const country of countries){
+        if(country.includes("land")){
+            countriesWithLand.push(country)
+        }else{
+            console.log(`All these countries are without "land" except`);
+        }
+    }
+
+    console.log(countriesWithLand)
+    console.log("\n");
+
+    //No.8
+
+    let countriesWithIa = [];
+    for(const country of countries){
+        if(country.endsWith("ia")){
+            countriesWithIa.push(country)
+        }else{
+            console.log(`All these countries do not end with "ia" except`);
+        }
+    }
+
+    console.log(countriesWithIa)
+
+    //No.9
+    let lengthOfCountries = []
+    for(const country of countries){
+        lengthOfCountries.push(country.length);
+    }
+
+    for(const country of countries){
+        if(country.length === Math.max(...lengthOfCountries)){
+            console.log(country)
+        }
+    }
+
+    //No.10
+    let charsLength = 5;
+    let countryWith5letters = [];
+    for(const country of countries){
+        if(country.length === charsLength){
+            countryWith5letters.push(country);
+        }
+    }
+
+    console.log(countryWith5letters);
+
+    //No.11
+    let longestArr = [];
+    for(const webTech of webTechs){
+        if(webTech.length > longestArr.length){
+            longestArr = webTech;
+        }
+    }
+
+    console.log(longestArr)
+
+    //No.12
+    let webTechInfo = []
+    for(const webTech of webTechs){
+        webTechInfo.push([webTech, webTech.length])
+    }
+
+    console.log(webTechInfo)
+
+    //No.13
+    const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+    let mern = "";
+    for(const merns of mernStack){
+        mern += merns[0]
+    }    
+
+    console.log(mern)
+
+    //No.14
+    const techStack = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"];
+    for(techStacks of techStack){
+        console.log(techStacks)
+    }
+
+    console.log("\n");
+
+    //No.15
+    const fruits = ['banana', 'orange', 'mango', 'lemon'];
+    for(let idx = fruits.length - 1; idx >= 0; idx--){
+        console.log(fruits[idx])
+    }
+    console.log("\n")
+    //No.16
+    const fullStack = [
+        ['HTML', 'CSS', 'JS', 'React'],
+        ['Node', 'Express', 'MongoDB']
+    ]
+
+    for(let i = 0; i < fullStack.length; i++){
+        for(let x = 0; x < fullStack[i].length; x++){
+            console.log(fullStack[i][x])
+        }
+    }
+
+    </script>
+</body>
+</html>

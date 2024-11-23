@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 lvl-3</title>
+    <script src="./countriesdata.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        //No.1
+        let result = [];
+        const languagesFromArr = countries_data.forEach((countrys) => {
+           for(const languages of countrys.languages){
+               result.push(languages)
+           }
+        });
+        console.log(result)
+
+        const languagesInCountries = new Set(result);
+        console.log(languagesInCountries);
+    </script>
+</body>
+</html>

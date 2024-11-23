@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 lvl1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //No.1
+        const aSet = new Set();
+        console.log(aSet)
+        //No.2
+        for(let i = 0; i <= 10; i++){
+           aSet.add(i);
+        }
+
+        console.log(aSet)
+
+        //No.3
+       console.log(aSet.delete(5));
+       console.log(aSet);
+
+       //No.4
+       aSet.clear();
+       console.log(aSet);
+
+       //No.5
+       const bSet = new Set();
+       const arr = ["Soe", "Kyaw", "Aung", "Khaing", "Oo"];
+       for(const ars of arr){
+            bSet.add(ars);
+       }
+
+       console.log(bSet);
+
+       //No.6
+       const countries = ['Finland', 'Sweden', 'Norway']
+       const aMap = new Map();
+       for(const country of countries){
+            aMap.set(country, country.length)
+       }
+
+       console.log(aMap);
+       
+    </script>
+</body>
+</html>

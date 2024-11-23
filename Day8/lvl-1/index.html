@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1, 2, 3
+        // const dog = {};
+        const dog = {
+            name: "Bohn Bohn",
+            legs: 4,
+            color: "yellow",
+            age: 5,
+            bark: function(){
+                return "Woof...Woof";
+            }
+
+        };
+        console.log(dog);
+
+        //No.4
+        console.log(dog.name, dog.legs, dog.color, dog.age, dog.bark());
+
+        //No.5
+        dog.breed = "none";
+
+        dog.getDogInfo = function(){
+            return `${this.name} is ${this.age} years old. It has ${this.color} color and ${this.legs} legs and its breed are ${this.breed}`;
+        }
+
+        console.log(dog)
+        console.log(dog.getDogInfo())
+
+    </script>
+</body>
+</html>

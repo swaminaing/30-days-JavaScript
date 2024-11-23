@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9 lvl-3</title>
+    <script src="./countriesdata.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1
+
+        // by name 
+        const sortedCountriesByName = countries_data.slice().sort((a, b) => {
+            if(a.name < b.name) return -1
+            if(a.name > b.name) return 1
+        })
+
+        console.log(sortedCountriesByName)
+
+        //by capital
+        const sortedCountriesByCapital = countries_data.slice().sort((a, b) => {
+            if(a.capital < b.capital) return -1
+            if(a.capital > b.capital) return 1
+        })
+
+        console.log(sortedCountriesByCapital)
+        //by population
+        const sortedCountries = countries_data.sort((a, b) => {
+            if(a.population < b.population) return -1
+            if(a.population > b.population) return 1
+        })
+
+        console.log(sortedCountries)
+
+        //No.2
+        let lanArr = [];
+       const mostSpokenLang = () => {
+            countries_data.forEach(country => console.log(country.languages))
+       }
+
+        console.log(mostSpokenLang());
+
+        //No.3
+        let topTenPopulatedCountries = countries_data.sort((a, b) => {
+            a.population - b.population;
+        })
+        console.log(topTenPopulatedCountries.reverse().slice(0, 10));
+
+
+        //No.4
+        
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 lvl-2</title>
+    <script src=""></script>
+</head>
+<body>
+    <script type="text/javascript">
+        //No.1
+        const a = [4, 5, 8, 9]
+        const b = [3, 4, 5, 7]
+
+        const c = [...a, ...b];
+
+        const cSet = new Set(c);
+        console.log(cSet)
+
+        //No.2
+        const A = new Set(a);
+        const B = new Set(b);
+        const interset = a.filter((num) => B.has(num));
+        const C = new Set(interset);
+        console.log(C); 
+    </script>
+</body>
+</html>

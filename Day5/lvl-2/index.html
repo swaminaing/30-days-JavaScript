@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 lvl-2</title>
+    <!-- external js file  wanna access from outside  -->
+    <script src="./countries.js" type="text/javascript"></script>
+    <script src="./web_techs.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        //No.1
+        // console.log(countries, webTechs);
+        //No.2 
+        let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+        console.log(text.split(' ').length)
+        //No.3
+        const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+        if(shoppingCart.includes("Meat") === false){
+            shoppingCart.unshift("Meat");
+        }
+
+        shoppingCart.includes("Sugar") === false ? shoppingCart.push("Sugar") : shoppingCart;
+        if(shoppingCart.includes("Honey") === true){
+            console.log(shoppingCart.slice(shoppingCart.indexOf("Honey"), shoppingCart.indexOf("Honey") + 1)
+)
+        }
+
+        const modifyArr = shoppingCart.join(',');
+        console.log(modifyArr.replace("Tea", "Green Tea").split(","));
+        console.log(shoppingCart);
+
+        //No.4 
+        let country = "Ethiopia";
+        let result = countries.includes(country) === true ? country.toUpperCase() : countries.push(country);
+        console.log(result);
+
+        //No.5
+        // let webPre = "Sass";
+        // let hasWebPre = webTechs.includes(webPre) === true ? `${webPre} is CSS pre-processor` : webPre.push(webPre);
+        // console.log(hasWebPre);
+
+        //No.6
+        const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+        const backEnd = ['Node','Express', 'MongoDB']
+
+        // const fullstack = [...frontEnd, ...backEnd];
+        const fullstack = frontEnd.concat(backEnd)
+        console.log(fullstack)
+
+    </script>
+    
+</body>
+</html>

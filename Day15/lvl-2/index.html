@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 lvl-2</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No1
+        class Animal{
+            constructor(name, age, color, legs){
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.legs = 4;
+            }
+
+            animalInfo(){
+                let name = this.name;
+                let age = this.age;
+                let color = this.color;
+                let legs  = this.legs;
+
+                return `${name} is ${age} years old and it has ${color} color and it have ${legs} legs`;
+            }
+        }
+
+        class NewAnimal extends Animal{
+            constructor(name, age, color, gender){
+                super(name, age, color)
+                this.gender = gender;
+            }
+
+
+            animalInfo(){
+                let name = this.name;
+                let age = this.age;
+                let color = this.color;
+                let gender = this.gender;
+
+                return `${name} is ${age} years old and it has ${color} color. It is ${gender}`;
+            }
+        }
+
+        const newAnimal = new NewAnimal("Bo",3, "Yellow", "male");
+        console.log(newAnimal);
+        console.log(newAnimal.animalInfo())
+    </script>
+</body>
+</html>

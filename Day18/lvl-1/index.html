@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day18 lvl-1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //No.1
+        const countriesAPI = 'https://restcountries.com/v2/all';
+        const catsAPI = 'https://api.thecatapi.com/v1/breeds';
+
+        // const fetchData = async () => {
+        // try {
+        //     const response = await fetch(url)
+        //     const countries = await response.json()
+        //     console.log(countries)
+        // } catch (err) {
+        //     console.error(err)
+        // }
+        // }
+        // console.log('===== async and await')
+        // fetchData()
+
+        const fetchData = async () => {
+            try{
+                const response = await fetch(countriesAPI);
+                const countries = await response.json();
+
+                for(const country of countries){
+                    console.log(country.name, country.capital, country.languages, country.population, country.area)
+                }
+            }catch (err){
+                console.log(err)
+            }
+        }
+
+        fetchData()
+</script>
+</body>
+</html>

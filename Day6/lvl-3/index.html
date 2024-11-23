@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6 lvl-3</title>
+    <!-- countries.js from external  -->
+    <script src="../lvl-2/countries.js" type="text/javascript"></script>
+    <!-- web_techs.js from external files -->
+    <script src="../lvl-2/web_techs.js" type="text/javascript"></script>
+
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+        //No.1 
+        // (avoid mutation)
+        const newCountriesArr = [...countries];
+        console.log(newCountriesArr)
+        //Using Array.from()
+        // const newArr = Array.from(countries);
+        // console.log(newArr)
+
+        //No.2
+        let sortedCountries = newCountriesArr.slice().sort();
+        console.log(sortedCountries);
+
+        //No.3
+        let copiedWebTechs = Array.from(webTechs);
+        let sortedWebTechs = copiedWebTechs.sort();
+        console.log(copiedWebTechs, sortedWebTechs);
+        // for mern stack 
+        const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+        let sortedMern = mernStack.sort();
+        console.log(mernStack, sortedMern);
+
+        //No.4
+        let countriesLand = [];
+        for(const country of newCountriesArr){
+            if(country.includes("land") === true){
+                countriesLand.push(country)
+            }
+        }
+
+        console.log(countriesLand);
+
+        //No.5
+        let longestArr = [];
+        for(const country of newCountriesArr){
+            if(country.length > longestArr.length){
+                longestArr = country;
+            }
+        }
+
+        console.log(longestArr);
+
+        //No.6 is also the same as no.4
+        //using filter methods
+        const countriesWithLand = newCountriesArr.filter(country => country.includes("land"));
+        console.log(countriesWithLand);
+
+        //No.7
+        let countriesWithFirstFour = [];
+        for(const country of newCountriesArr){
+            countriesWithFirstFour.push(country.slice(0, 4))
+        }
+
+        console.log(countriesWithFirstFour)
+
+        //No.8
+        let countriesWithTwoOrMore = [];
+        for(const country of newCountriesArr){
+            if(country.includes(" ") === true){
+                countriesWithTwoOrMore.push(country)
+            }
+        }
+
+        console.log(countriesWithTwoOrMore)
+
+        //No.9
+        const reversedCountries = newCountriesArr.reverse();
+        const capitalizeCountries = [];
+        for(const country of reversedCountries){
+            capitalizeCountries.push(country.charAt(0).toUpperCase()+country.slice(1));
+        }
+
+        console.log(capitalizeCountries)
+
+    </script>
+</body>
+</html>

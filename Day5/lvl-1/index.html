@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 lvl-1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+        //No.1 
+        const arr = [];
+        //No.2
+        const arr1 = [1, "mg mg", "swam", {name : "zaw zaw"}, 3];
+        //No.3
+        console.log(arr1.length);
+        //No.4
+        console.log(arr1[0], arr1[2], arr1[arr1.length-1]);
+        //No.5
+        const mixedDataTypes = [1, 'mg mg', true, null, {age: 20}];
+        console.log(mixedDataTypes.length);
+        console.log(mixedDataTypes);
+        //No.6, 7
+        const itCompanies = ['Facebook', 'Google', "Microsoft", 'Apple', "Ibm", "Oracle", 'Amazon'];
+        console.log(itCompanies);
+        //No.8 
+        console.log(itCompanies.length);
+        //No.9
+        let middleIndex = Math.floor(itCompanies.length / 2);
+        console.log(middleIndex)
+        console.log(itCompanies[0], itCompanies[middleIndex], itCompanies[itCompanies.length - 1]);
+        //No.10
+        console.log(`${itCompanies.join(' ')} \n`);
+        //No.11
+        console.log(`${itCompanies.join(' ').toUpperCase()}`);
+        //No.12
+        console.log(`${itCompanies.join(',')} are big companies`);
+        //No.13
+        // let companiesName = prompt("Enter a company name: ");
+        // let changeCapitalize = companiesName[0].charAt().toUpperCase()+`${companiesName.slice(1)}`;
+        // if(itCompanies.includes(changeCapitalize) === true){
+        //     console.log(`${changeCapitalize} is included in the list.`);
+        // }else{
+        //     console.log("Company is not found");
+        // }
+        //No.14
+        //No.15
+        console.log(itCompanies.sort());
+        //No.16
+        console.log(itCompanies.reverse());
+        //No.17
+        console.log(itCompanies.slice(0, 3));
+        //No.18
+        console.log(itCompanies.splice((itCompanies.length - 1) - 2)); //last 3 position
+        //No.19
+        console.log(itCompanies[middleIndex])
+        console.log(itCompanies.splice(middleIndex, 1));
+        //No.20
+        console.log(itCompanies.shift());
+        //No.21
+        // console.log(itCompanies)
+        // we will get unexpected outcomes bcos I already slice out others in above
+        const techCompanies = ['Facebook', 'Google', "Microsoft", 'Apple', "Ibm", "Oracle", 'Amazon'];
+        middleIndex = Math.floor(techCompanies.length / 2);
+
+        const leftPart = techCompanies.slice(0, techCompanies.indexOf(techCompanies[middleIndex]));
+        const rightPart = techCompanies.slice(techCompanies.indexOf(techCompanies[middleIndex]) + 1);
+
+        // const rightPart = techCompanies.slice(techCompanies[middleIndex] + 1);
+        // console.log(leftPart , rightPart);
+        console.log(...leftPart, ...rightPart);
+
+        //No.22
+        console.log(techCompanies.slice(techCompanies.lastIndexOf()));
+
+        //No.23
+        console.log(techCompanies.splice());
+    </script>
+</body>
+</html>

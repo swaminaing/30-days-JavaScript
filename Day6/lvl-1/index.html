@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6 lvl-1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+            const countries = [
+            'Albania',
+            'Bolivia',
+            'Canada',
+            'Denmark',
+            'Ethiopia',
+            'Finland',
+            'Germany',
+            'Hungary',
+            'Ireland',
+            'Japan',
+            'Kenya'
+            ]
+
+            const webTechs = [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB'
+            ]
+
+            const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+
+        //No.1 
+        for(let i = 0; i <= 10; i++){
+            console.log(i);
+        }
+
+        // let i = 0;
+        // while(i <= 10){
+        //     console.log(i)
+        //     i++;
+        // }
+        
+        // let x = 0
+        // do {
+        //     console.log(x)
+        //     x++
+        // } while (x <= 10)
+
+        console.log("\n");
+
+        //No.2
+        for(let i=10; i > 0; i--){
+            console.log(i);
+        }
+        
+        // let x = 10
+        // while(x > 0){
+        //     console.log(x);
+        //     x--;
+        // }
+        
+        // do{
+        //     console.log(x);
+        //     x--
+        // }while(x > 0)
+        
+        console.log("\n");
+
+        //No.3
+
+        // let n = +prompt("Enter number: ");
+
+        // for(let idx=0; idx <= n; idx++){
+        //     console.log(idx);
+        // }
+
+        //No.4
+        const rows = 7;
+
+        for (let i = 1; i <= rows; i++) {
+        let stars = '';
+        for (let j = 1; j <= i; j++) {
+            stars += '*';
+        }
+        console.log(stars);
+        }
+
+        console.log("\n")
+
+        //No.5
+        let counts = 10;
+        let x = 0, y = 0;
+        for(x; x <= counts; x++){
+            // console.log(x);
+            for(y; y <= x; y++){
+                console.log(`${x} x ${y} = ${x * y}`);
+            }
+        }
+
+        console.log("\n")
+
+        //No.6
+        //reuse above variables, is it good or bad idea? 
+        x=0;
+        y=0;
+        let z = 0;
+        for(x; x <= counts; x++){
+            for(y; y <= x; y++){
+                for(z; z <= y; z++){
+  
+                   console.log(`${x} ${x*y} ${x*y*z}`)
+                }
+            }
+        }
+
+        //No.7
+        counts = 100;
+        for(let i=0; i <= counts; i++){
+            if(i % 2 === 0){
+                console.log(i);
+            }
+        }
+
+        //No.8
+        for(let i=0; i<=counts; i++){
+            if(i % 2 === 1){
+                console.log(i);
+            }
+        }
+
+        //No.9
+        for(let i=1; i<=counts; i++){
+            if(i % i === 0 || i % 1 === 0){
+                console.log(i);
+            }
+        }
+        console.log("\n");
+
+        //No.10
+        let sum = 0;
+        for(let x=0; x <= counts; x++){
+            sum += x;
+            
+        }
+
+        console.log(`The sum from 0 to 100 is ${sum}`);
+
+        //No.11
+        let sumOfeven = 0;
+        let sumOfodd = 0;
+        for(let i=0; i<=counts; i++){
+            if(i % 2 === 0){
+                sumOfeven += i;
+            }else{
+                sumOfodd += i;
+            }
+        }
+
+        console.log(`The sum of even from 0 to 100 is ${sumOfeven} and The sum of odd from 0 to 100 is ${sumOfodd}`);
+
+        //No.12
+        const newArr = [];
+        newArr.push(sumOfeven);
+        newArr.push(sumOfodd);
+        console.log(newArr)
+
+        //No.13
+        let ranNumArr = [];
+        counts = 5;
+        for(let i=0; i<= counts; i++){
+            ranNumArr.push(Math.floor(Math.random() * 10));  
+        }
+
+        console.log(ranNumArr);
+
+        //No.14
+
+        //No.15
+        let result = "";
+        const chars="1234567890abcdefghijklmno";
+        for(let i=0; i<6; i++){
+            result += chars[Math.floor(Math.random() * chars.length)];
+        }
+
+        console.log(result);
+
+       
+
+
+    </script>
+</body>
+</html>

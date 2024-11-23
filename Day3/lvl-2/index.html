@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2 lvl-2</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        //No.1 
+        //    let base = prompt("Enter your base: ");
+        //    let height = prompt("Enter height: ");
+
+        // const area = 0.5 * parseInt(base) * +height;
+
+        //    console.log('The area of the triangle is ' + area);
+    
+        //No.2
+        // let sideA = prompt("Enter side a: ");
+        // let sideB = prompt('Enter side b: ');
+        // let sideC = prompt('Enter side c: ');
+        // const perimeter = +sideA + +sideB + +sideC; //haha, fun? right?
+
+        // console.log("The perimeter of the triangle is " + perimeter);
+
+        //No. 3
+        // let length = +prompt("Enter the length of rectangle: ");
+        // let width = +prompt("Enter the width of rectangle: ");
+        // const area = length * width;
+        // const perimeter = 2*((length + width));
+
+        // console.log(`Area of the rectangle is ${area}`);
+        // console.log(`Perimeter of the rectangle is ${perimeter}`);
+
+        //No.4 
+        // let radius = +prompt("Enter the radius: ");
+        // const pi = 3.14;
+        // const areaofcircle = pi * radius * radius;
+
+        // console.log(areaofcircle);
+
+        //No.5 
+        //Given equation : y=2x-2 (remember the equation of slope is y=mx+b)
+        const slope = 2;
+
+        //when y = 0;
+        const xintercept = 1 // 0 = 2x-2; -> 2x=2 -> x = 1;
+        //when x = 0;
+        const yintercept = -2 // y = 2 * 0 - 2 -> y = -2;
+
+        console.log(`slope: ${slope} \n xintercept: {${xintercept}, 0}between point (2, 2) and point(6,10) \n yintercept: {0, ${yintercept}}`);
+
+        //No.6
+        //Given equation :  m = (y2-y1)/(x2-x1)
+        //between point (2, 2) and point(6,10)
+        //imagine point1(x1, y1) and (x2, y2)
+
+        let x1 = 2, y1 = 2; //for point(2, 2)
+        let x2 = 6, y2 = 10 //for point(6, 10)
+        let m = (y2 - y1) / (x2 - x1);
+
+        console.log("The slope (m): " + m);
+
+        //No. 7
+        //compare the slope;
+        const result = slope > m ? "slope is greater than m" : slope < m ? "slope is less than m" : slope === m ? "slope is strictly equal to m" : slope == m ? "slope is equal to m" : false;
+        //ofcourse there are other possible comparison >= / <= ...
+
+        console.log(result);
+
+        // No.8
+        //Given equation : y (y = x**2 + 6x + 9);
+        // what x value makes y = 0
+        function guessNum(x){
+            const y =  x ** 2 + 6 * x + 9;
+            if(y === 0){
+                // console.log(x);
+            }
+            // console.log(y);
+        }
+
+        let x = 0; 
+        while(x <= 0){
+            x--;
+            // guessNum(x);s
+        }
+
+        // guessNum(-3); // we will use loop and return value automatically.
+        // No.9
+
+        // const hours = prompt("Enter hours :");
+        // const perrate = prompt("Enter rate per hour: ");
+        
+        // No.10 
+       function isLong(name){
+            let result = name.length > 7 ? "Your name is Long" : "Your name is short";
+            console.log(result)
+       }
+
+       isLong("Swam Min Naing")
+
+       //No.11 
+       let firstName = "SwamMin";
+       let lastName = "Naing";
+
+       let islong = firstName.length > lastName.length ? `Your firstname, ${firstName} is longer than your lastname ${lastName}` : `Your firstname, ${firstName} is not longer than your lastname ${lastName}`;
+       console.log(islong);
+
+       //No.12
+       let myAge = 20; 
+       let yourAge = 19;
+       const isElder = myAge < yourAge ? `I am ${(myAge - yourAge) < 0 ? (myAge - yourAge) * -1 : (myAge - yourAge)} younger than you` : `I am ${myAge - yourAge} older than you`; // I don't want negative number so I multiply with -1
+       console.log(isElder);
+
+       //No.13
+       //let birthYear = +prompt("Enter your birth year: " );
+       //let currentYear = new Date().getFullYear();
+       //let currentAge = currentYear - birthYear;
+
+       //const isLigit = currentAge > 18 ? `Your are ${currentAge}. You are old enough to drive` : `You are ${currentAge}. You are not old enough to drive`;
+
+       //console.log(isLigit)
+
+        //No.14
+        //    let numofYears = +prompt("Enter number of years you live: ");
+        //    const secondsInYear = 365 * 24 * 60 * 60;
+        //    const secondsYouLived = numofYears * secondsInYear;
+        //    console.log(`You lived ${secondsYouLived} seconds`);
+
+        //No.15
+        const date = new Date();
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        const day = date.getDate();
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+
+        // (i) YYYY-MM-DD HH:mm
+        console.log(`${year}-${month}-${day} ${hours}:${minutes}`);
+
+        //(ii) DD-MM-YYYY HH:mm
+        console.log(`${day}-${month}-${year} ${hours}:${minutes}`);
+        //(iii) DD/MM/YYYY HH:mm
+        console.log(`${day}/${month}/${year} ${hours}:${minutes}`);
+
+       
+       
+
+    </script>
+</body>
+</html>
